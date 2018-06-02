@@ -9,7 +9,15 @@
     <link data-require="bootstrap@3.3.0" data-semver="3.3.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.css" />
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" type="text/css" href="assets/Menu.css">	
+    <link rel="stylesheet" href="assets/Login.css">
+    <link rel="stylesheet" href="assets/Home.publico.css">
+    <link rel="stylesheet" href="assets/Home.transaccional.css">
+    <link rel="stylesheet" href="assets/Mascota.css">
+    <link rel="stylesheet" href="assets/Registrar.usuario.css">
+    <link rel="stylesheet" href="assets/Usuario.css">
+    <!-- endbuild -->
       
     <script data-require="bootstrap@3.3.0" data-semver="3.3.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -24,7 +32,43 @@
    
     <script src='https://www.google.com/recaptcha/api.js'></script>	
 
-    <script src="vendor.js"></script>
+    <!-- build:js vendor.js -->
+    <script src="app.js"></script>
+
+    <script src="constant/constant.js"></script>
+    <script src="directives/directive.js"></script>
+    <script src="services/Mascota.service.js"></script>
+    <script src="services/Registrar.usuario.service.js"></script>
+    <script src="services/Usuario.service.js"></script>
+    <script src="services/Login.service.js"></script>
+    <script src="services/Adopcion.service.js"></script>
+    <script src="services/Apadrinamiento.service.js"></script>
+    <script src="services/Solicitud.adopcion.service.js"></script>
+    <script src="services/Solicitud.apadrinamiento.service.js"></script>
+    <script src="services/Estado.solicitud.adopcion.service.js"></script>
+    <script src="services/Estado.solicitud.apadrinamiento.service.js"></script>
+    <script src="services/SolicitudAdopcionService.js"></script>
+    <script src="services/SolicitudApadrinamientoService.js"></script>
+    <script src="services/Home.publico.service.js"></script>
+
+    <script src="controllers/Home.publico.controller.js"></script>
+    <script src="controllers/Login.controller.js"></script>
+    <script src="controllers/Login.adopcion.controller.js"></script>
+    <script src="controllers/Login.apadrinar.controller.js"></script>
+    <script src="controllers/Home.transaccional.controller.js"></script>
+    <script src="controllers/Mascota.controller.js"></script>
+    <script src="controllers/Registra.usuario.controller.js"></script>
+    <script src="controllers/Usuario.controller.js"></script>
+    <script src="controllers/Adopcion.controller.js"></script>
+    <script src="controllers/Apadrinamiento.controller.js"></script>
+    <script src="controllers/Solicitud.adopcion.controller.js"></script>
+    <script src="controllers/Solicitud.apadrinamiento.controller.js"></script>
+    <script src="controllers/Estado.solicitud.adopcion.controller.js"></script>
+    <script src="controllers/Estado.solicitud.apadrinamiento.controller.js"></script>
+    <script src="controllers/Salir.controller.js"></script>
+
+    <script src="filters/filter.js"></script>
+    <!--endbuild-->
   </head> 
   <body ng-app="mimasApp">    
        <div class="contenedor-principal" data-ng-view=""></div>   

@@ -1,0 +1,47 @@
+
+
+.body-home-transaccional{
+    height: 100%;
+	width: 100%;
+	max-height: 100%;
+	background: url(gato.jpg) no-repeat fixed center top; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+
+.botones{
+	margin-left: 13%;
+}
+
+.btn{
+	width: 65%;
+}
+
+
+.header{
+	height: 90px;
+    background-color: #66af96;
+}
+
+.footer{
+	height: 150px;
+    background-color: rgb(197, 195, 195);
+}
+
+.titulo{
+	
+	margin-bottom: 30px;
+	color: #66af96;
+}
+
+
+
+.mensajeError {
+    font-family: sourcesanspro;
+    font-size: 14px;
+    color: #f93a0e;  
+
+}

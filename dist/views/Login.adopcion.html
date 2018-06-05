@@ -1,0 +1,81 @@
+<header>
+      <a id="redirect" style="display: none;" href="../Home_Transaccional/Home_transaccional.html"></a>  
+      <div class="header">
+        <div id='cssmenu'>
+            <ul>
+                <li><a href='#/'><span>Home</span></a></li>
+                <li class='active has-sub'><a href='#'><span>Mascotas</span></a>
+                    <ul>
+                        <li class='has-sub'><a href='#'><span>Perdidos</span></a></li>
+                        <li class='has-sub'><a href='#'><span>Encontrados</span></a></li>
+                        <li class='has-sub'><a href='#'><span>En adopción</span></a></li>
+                    </ul>
+                </li>
+                <li class='active has-sub'><a href='#'><span>Fundaciones</span></a>
+                <ul>
+                    <li class='has-sub'><a href='#'><span>Información</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Miembros</span></a></li>
+                    <li class='has-sub'><a href='#'><span>Donaciones</span></a></li>
+                    </ul>
+                </li>
+                <li class='active has-sub'><a href='#'><span>Adopciones</span></a>
+                <ul>
+                    <li class='has-sub'><a href='#'><span>Proceso y requisito</span></a></li>
+                    </ul>
+                </li>
+                <li class='active has-sub'><a href='#'><span>Interés</span></a>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Cuidados de animales</a></li>
+                </ul>
+                </li>
+                <li class='last'><a href='#/login'><span>Iniciar sesión</span></a></li>
+            </ul>
+        </div>
+    </div> 
+  </header>
+            <div class="body-login"  ng-controller="loginAdopcionController as vm" id="dialogContainer" >
+      <h1 class="titulo">Iniciar sesión</h1>
+      <div class="row">   	    	
+         <div class="form-group col-xs-12 col-sm-12">
+          <label for="usr">Usuario* (Correo registrado)</label>
+          <input type="text" class="form-control" ng-model="vm.usuario"  ng-keyup="vm.functionUsuario()">
+            <p class="mensajeError"  ng-bind="vm.mensajeUsuario" ></p>
+        </div>
+      </div>
+      <div class="row">
+         <div class="form-group col-xs-12 col-sm-12">
+          <label for="usr">Contraseña*</label>
+          <input type="password" class="form-control" ng-model="vm.contrasena"  ng-keyup="vm.functionContrasena()">
+           <p class="mensajeError"  ng-bind="vm.mensajeContrasena" ></p>
+        </div>
+      </div>
+      <div id='recaptcha' class="g-recaptcha"
+       data-sitekey="6LeDsDIUAAAAAOTgmn8pB__pcQClFbSno2zA7nvX"
+       data-callback="login"
+       data-size="invisible"></div>   	  
+      <div class="row botones">
+         <div class="form-group col-xs-6 col-sm-6">
+          <button type="button" class="btn btn-success" ng-click="vm.cancelar()">Cancelar</button>
+        </div>
+        <div class="form-group col-xs-6 col-sm-6">
+           <button type="button" id="button1" class="btn btn-success" ng-click="vm.login()">Aceptar</button>
+        </div>
+      </div>
+      <div class="row">
+         <div class="form-group col-xs-12 col-sm-12">
+          <a href="#">¿Olvidaste tu cuenta?</a>	           
+        </div>
+      </div>
+      <div class="row">
+         <div class="form-group col-xs-12 col-sm-12">
+          <a href="#/registra-suario">Registrate</a>	           
+        </div>
+      </div>     	 
+     <md-content>          
+         <div ng-if="status">
+            <br/>
+         </div>
+      </md-content>   
+</div> 

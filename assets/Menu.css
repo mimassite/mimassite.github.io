@@ -600,7 +600,7 @@ border: 1px solid #f4f5f7;
   color: #60B99A;
 }
 .form-control{
-  height: 45px;
+  height: 35px;
   color: #60B99A;
 }
 .input-group:hover span i{
@@ -659,7 +659,7 @@ h1{
 }
 
 .form-control{
-    margin:20px 0px;
+    /* margin:20px 0px; */
 }
 
 .buttons{

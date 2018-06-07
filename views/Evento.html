@@ -1,0 +1,106 @@
+   <div   ng-controller="eventoController as vm" id="dialogContainer">
+         <div menu-transaccional></div>
+         <div class="body">
+            <h1 class="titulo">Evento</h1>
+            <div class="row">
+            <div class="form-group col-xs-6 col-sm-6 contenedorImagne">
+                            <img ng-src="{{ vm.thumbnail.dataUrl }}" width="150" height="150"  /> 
+                            <img id="img" src="./assets/evento.jpg" style="display: none;">
+            </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">   	    	
+                <div class="form-group col-xs-6 col-sm-6">
+                <label for="usr">Nombre*</label>
+                <input type="text" class="form-control" ng-model="vm.Nombre" ng-keyup="vm.functionNombre()" oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');" >
+                <p class="mensajeError"  ng-bind="vm.mensajeNombre"></p>
+                </div>
+                <div class="form-group col-xs-6 col-sm-6">
+                <label for="usr">Responsable*</label>
+                <input type="text" class="form-control" ng-model="vm.Usuario" ng-keyup="vm.functionusuario()">
+                <p class="mensajeError"  ng-bind="vm.mensajeUsuario"></p>
+                </div>
+            </div>
+            <div class="row">   	        
+                <div class="form-group col-xs-6 col-sm-6">
+                            <label for="usr">Fecha de inicial*</label>  
+                            <md-datepicker ng-model="vm.Fechai" md-placeholder="Enter date" ng-change="vm.functionFechai()"></md-datepicker> 
+                            <p class="mensajeError"  ng-bind="vm.mensajeFechai"></p>        
+                </div>
+                <div  class="form-group col-xs-6 col-sm-6"  flex-gt-xs>    
+                <div flex-gt-xs>	
+                                <label for="usr">Fecha de final*</label>  
+                                <md-datepicker ng-model="vm.Fechaf" md-placeholder="Enter date" ng-change="vm.functionFechaf()"></md-datepicker> 
+                                <p class="mensajeError"  ng-bind="vm.mensajeFechaf"></p>
+                    </div>    
+                </div>	
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-6 col-sm-6"  flex-gt-xs  ng-app="test"> 
+                    <label for="usr">Imagen</label>      
+                    <input type="file" name="file"  onchange="angular.element(this).scope().photoChanged(this.files)" ng-model="vm.imagen"/>                         
+                </div>
+                
+            </div>
+
+            <div class="row">
+                
+                <div class="form-group col-xs-6 col-sm-6">
+                <label for="usr">Estado*</label>
+                    <select class="form-control" ng-model="vm.Estado"  ng-change="vm.functionEstado()" >
+                    <option value="0" ng-selected="true">Seleccione un estado...</option>
+                    <option value="1">En proceso</option>
+                    <option value="2">Abierto</option>
+                    <option value="3">Pendiente</option> 
+                    <option value="4">Confirmado</option>                              
+                    </select>	         
+                    <p class="mensajeError"  ng-bind="vm.mensajeEstado"></p>	          
+                </div>	         
+            </div>
+
+            <div class="row">   
+                <div class="form-group col-xs-6 col-sm-6">
+                <label for="usr">Descripcion*</label>
+                <input type="text" class="form-control" ng-model="vm.Descripcion" ng-keyup="vm.functionDescripcion()">
+                    <p class="mensajeError"  ng-bind="vm.mensajeDescripcion"></p>
+                        </div>
+                        <div class="form-group col-xs-6 col-sm-6">
+                            <label for="usr">Lugar*</label>
+                            <input type="text" class="form-control" ng-model="vm.Lugar" ng-keyup="vm.functionLugar()" oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');">
+                            <p class="mensajeError"  ng-bind="vm.mensajeLugar"></p>
+                        </div>
+                
+            </div>
+            
+        
+            
+            <br>
+            <div class="row botones">
+                <div class="form-group col-xs-3 col-sm-3">
+                <button type="button" class="btn btn-success" ng-disabled="vm.registrarDisabled"  ng-click="vm.registrar()">Registrar</button>
+                </div>
+                <div class="form-group col-xs-3 col-sm-3">
+                    <button type="button" class="btn btn-success" ng-disabled="vm.consultarDisabled" ng-click="vm.consultar()">Consultar</button>
+                </div>
+                <div class="form-group col-xs-3 col-sm-3  identificacion">	       
+                    <input type="text" class="form-control" ng-model="vm.Id2" ng-Disabled="vm.idDisabled" oninput="this.value=this.value.replace(/[^0-9]/g,'');" ng-keyup="vm.functionId2()" placeholder="Identificador">
+                <p class="mensajeError"  ng-bind="vm.mensajeId2"></p>	
+                </div>
+                <div class="form-group col-xs-3 col-sm-3">
+                        <button type="button" class="btn btn-success" ng-disabled="vm.actualizarDisabled" ng-click="vm.actualizar()">Actualizar</button>
+                </div>
+            </div>
+            <div class="row botones">
+                <div class="form-group col-xs-3 col-sm-3">
+                    <button type="button" class="btn btn-success" ng-disabled="vm.eliminarDisabled" ng-click="vm.showConfirm($event)">Eliminar</button>
+                </div> 
+                <div class="form-group col-xs-3 col-sm-3">
+                    <button type="button" class="btn btn-success" ng-disabled="vm.DisabledCancelar" ng-click="vm.cancelar()">Cancelar</button>
+                </div>   	    	
+            </div>  
+        </div>     	 
+    </div>
+    <section class="successs footer-zone-transactional" id="redsocial">
+            <img src="assets/piedepagina.png" style="padding-left: 200px">
+       </section> 

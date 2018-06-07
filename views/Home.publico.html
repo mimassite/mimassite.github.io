@@ -18,9 +18,9 @@
                 <li class="page-scroll">
                     <a href="#Mascotas">Mascotas</a>
                 </li>
-                <li class="page-scroll">
+                <!-- <li class="page-scroll">
                     <a href="#Eventos">Eventos</a>
-                </li>
+                </li> -->
                 <li class="page-scroll">
                     <a href="#Nosotros">Nosotros</a>
                 </li>
@@ -28,10 +28,10 @@
                     <a href="#Ayuda">Ayuda</a>
                 </li>
                 <li class="page-scroll">
-                    <a href="#about">Regístrate</a>
+                    <a href="#/registra-suario">Regístrate</a>
                 </li>
                 <li class="page-scroll" style="padding-right:100px">
-                    <a class="" data-toggle="modal" data-target="#demo">Ingresar</a>
+                    <a class="" href="#/login" >Ingresar</a>
                 </li>
             </ul>
         </div>
@@ -40,80 +40,29 @@
 
 <link rel="stylesheet" href="assets/botoneshome.css">
 
-<header id="page-top" style='background:url(assets/ompletion.png)'>
-    <div class="container">
-        <center>
-        
-        
-        </center>
-            <section class="color-pattern-1">
-                
-                <div>
-                    <button class="button button-1 button-1f">Adopta</button>
-                    <button class="button button-1 button-1f">Apadrina</button>
-                </div>
-
-
-                
-                 
-            </section>
-           
-           
-       
-        </div>
-        
+<header id="page-top" style='background:url(assets/ompletionw.jpg)'>
 </header>
 
 <div class="content-wrapper" ng-controller="homepublicoController as vm" id="dialogContainer" >
    
-    <section class="success" id="Mascotas">
-        <div class="row lista-mascota">
-            <di ng-repeat="mascota in vm.filteredTodos | filter : filtro" class="col-md-2 item-lista-mascota">
-                <img class="img-mascota" ng-src="{{ mascota.imagen }}" /><br/> 
-                <span>Nombre: </span class="capitalize">{{mascota.nombre}}<br/>                
-                <span>Sexo: </span>{{mascota.genero | sexo}}<br/> 
-                <span>Estado: </span>{{mascota.estado | estado}} <br/> <br/> 
-                <button type="button" class="btn btn-success btn-adoptar"   ng-click="vm.adoptar(mascota.id)" >Adoptar</button>	
-                <button type="button" class="btn btn-success btn-apadrinar"   ng-click="vm.apadrinar(mascota.id)" >Apadrinar</button>	
-             </di>
-         </div><br/>
-         <div data-pagination="" data-num-pages="vm.numPages()" 
-         data-current-page="vm.currentPage" data-max-size="vm.maxSize"  
-         data-boundary-links="true"></div>  
-    </section>
-    <section class="success" id="Eventos">
+  
+    <!-- <section class="success" id="Eventos">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                  
-                    
                 </div>
             </div>
             <div class="row">
-                
             </div>
         </div>
-    </section>
-
+    </section> -->
     <section class="success" id="Mascotas">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                   
-                    
-                </div>
-            </div>
-            <div class="row">
-                
-            </div>
-        </div>
+                    <div lista-mascota></div>
     </section>
     <section class="primary" id="Nosotros">
         <div class="containers">
             <div class="row" >
                 <div class="col-lg-12 text-center">
-                   
-               
                 </div>
             </div>
             <div class="row" class="col-lg-12 text-center">
@@ -121,7 +70,6 @@
             </div>
         </div>
     </section>
-
     <section class="success" id="Ayuda">
             <div class="container">
                 <div class="row">
@@ -132,7 +80,6 @@
                                       <div class="timeline-panel">
                                         <div class="timeline-heading">
                                           <h4 class="timeline-title">Preguntas frecuentes</h4>
-                                          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
                                         </div>
                                         <div class="timeline-body">
                                           <p>¿cómo realizo una adopción?: En la página principal de MIMAS se encuentra una lista con las mascotas que se tienen disponibles para adopción, de las cuales se puede seleccionar cualquiera con presionar el botón adoptar o apadrinar lo que llevará a una nueva ventana en dónde se debe llenar un 
@@ -194,7 +141,6 @@
                                     </li>
                                 </ul>
                             </div>
-                    
                 </div>
             </div>
         </section>
@@ -209,7 +155,6 @@
     $('.timeline-body', this).toggle(); // p00f
 });
 </script>
-
 <script>
     $(function () {
 
@@ -228,18 +173,9 @@
 
     });
 </script>
-
-
-
-
-
-
-
-
 <div class="modal fade" id="demo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
     <div class="modal-dialog" ng-controller="loginController as vm" id="dialogContainer">
         <div class="">
-
 
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
             <div class="container">
@@ -286,79 +222,41 @@
                                                         <div class="col-sm-5 controls"> </div>
                                                         <button type="button" href="#" id="button1" class="btn btn-primary pull-right" ng-click="vm.login()">
                                                             <i class="glyphicon glyphicon-log-in"></i> Ingresar</button>
-                                                       
-
-                                                        
                                                     </div>
-                                                      
                                                     <hr class="spartan">
-                    
-                    
                                                 </div>
                                     </td>
                                     <td>
                                             <!-- <img src="assets/redes.png"> -->
                                     </td>
                                     </tr>
-<tr>
-    <td>
-            <div class="row">
-                    <div class="form-group col-xs-12 col-sm-12">
-                     <a href="#">¿Olvidaste tu cuenta?</a>	 
-                     <a style="padding-left:100px" href="#/registra-suario">Registrate</a>          
-                   </div>
-                   
-                 </div>
-                 	 
-                <md-content>          
-                    <div ng-if="status">
-                       <br/>
-                    </div>
-                 </md-content> 
-    </td>
-</tr>
-                            
-
-
-
-
-
-
-
+                                    <tr>
+                                        <td>
+                                                <div class="row">
+                                                        <div class="form-group col-xs-12 col-sm-12">
+                                                        <a href="#">¿Olvidaste tu cuenta?</a>	 
+                                                        <a style="padding-left:100px" href="#/registra-suario">Registrate</a>          
+                                                    </div>
+                                                    </div>
+                                                    <md-content>          
+                                                        <div ng-if="status">
+                                                        <br/>
+                                                        </div>
+                                                    </md-content> 
+                                        </td>
+                                    </tr>
                             </table>
-
-
-
                         </form>
-
                         <!-- <div id='recaptcha' class="g-recaptcha"
                                                 data-sitekey="6LeDsDIUAAAAAOTgmn8pB__pcQClFbSno2zA7nvX"
                                                 data-callback="login"
                                                 data-size="invisible"></div>   -->
-
-
-
-
                         <hr class="">
-
-
-
                         <div class="form-group">
-
-
-
-
                         </div>
-
-
-
                     </form>
                 </div>
-
-
-
             </div>
-
         </div>
     </div>
 </div>

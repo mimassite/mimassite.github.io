@@ -137,26 +137,29 @@
 							<input type="text" class="form-control" ng-model="vm.Id2" ng-Disabled="vm.idDisabled" oninput="this.value=this.value.replace(/[^0-9]/g,'');" ng-keyup="vm.functionId2()" placeholder="Identificador">
 						<p class="mensajeError"  ng-bind="vm.mensajeId2"></p>	
 					</div>
-
+					<div class="form-group col-xs-3 col-sm-3">
+						<button type="button" class="btn btn-success" ng-disabled="vm.actualizarDisabled" ng-click="vm.actualizar()">Actualizar</button>
+				    </div>
 			</div>
 			<div class="row">
-					<div class="form-group col-xs-3 col-sm-3">
-							<button type="button" class="btn btn-success" ng-disabled="vm.actualizarDisabled" ng-click="vm.actualizar()">Actualizar</button>
-					</div>
 				   <div class="form-group col-xs-3 col-sm-3">
 						<button type="button" class="btn btn-success" ng-disabled="vm.eliminarDisabled" ng-click="vm.showConfirm($event)">Eliminar</button>
 					</div> 
 					<div class="form-group col-xs-3 col-sm-3">
 						<button type="button" class="btn btn-success" ng-disabled="vm.DisabledCancelar" ng-click="vm.cancelar()">Cancelar</button>
 					</div>   	    	
-			</div>   	 
-			<md-content>       
+			</div>   
+		</br>	 
+			<!-- <md-content>       
 					<div ng-if="status">
 							<br/>  
 					</div>
-				</md-content>   
+				</md-content>    -->
 	</div>
-	<footer>
+	<!-- <footer>
 	<div class="footer"></div>
-	</footer>
+	</footer> -->
 </div> 
+<section class="successs footer-zone-transactional" id="redsocial">
+		<img src="assets/piedepagina.png" style="padding-left: 200px">
+   </section> 

@@ -1,225 +1,84 @@
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #d6e5f6">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button> 
+            <a class="navbar-brand" href="#page-top"><img class="img-responsive" src="assets/logos.png"  alt=""></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/#Mascotas">Mascotas</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/#Eventos">Eventos</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/#Nosotros">Nosotros</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/#Ayuda">Ayuda</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#/registra-suario">Regístrate</a>
+                </li>
+                <li class="page-scroll" style="padding-right:100px">
+                    <a class="" href="#/login" >Ingresar</a>
+                </li>
+            </ul>
+        </div>
 
- <a id="redirect" style="display: none;" href="../Home_Transaccional/Home_transaccional.html"></a>  
- <div class="container">
-     <ul id="gn-menu" class="gn-menu-main">
-         <li class="gn-trigger">
-             <a class="gn-icon gn-icon-menu"></a>
-             <nav class="gn-menu-wrapper">
-                 <div class="gn-scroller">
-                     <ul class="gn-menu">
-                         <!-- <li>
-                 <input placeholder="Buscar" type="search" class="gn-search">
-   
-                 <a class="gn-icon gn-icon-search" href='#'>
-                   <span>Buscar</span>
-                 </a>
-               </li> -->
-                         <li>
-                             <a class="gn-icon gn-icon-Informacion">Información</a>
- 
-                         </li>
-                         <li>
-                             <a class="gn-icon gn-icon-miembros">Miembros</a>
-                         </li>
-                         <li>
-                             <a class="gn-icon gn-icon-donaciones">Donaciones</a>
-                         </li>
-                         <li>
-                             <a class="gn-icon gn-icon-Galeria">Galería</a>
- 
-                         </li>
- 
-         </li>
-         </ul>
-         </div>
-         <!-- /gn-scroller -->
-         </nav>
-         </li>
-         <li>
-             <a href='#/' class="">
-                 <img src="assets/logito.png">
-             </a>
- 
-         </li>
- 
- 
- 
- 
- 
- 
- 
-         <li class='last'>
-             <a class="" data-toggle="modal" data-target="#demo">
-                 <span>
-                     <img src="assets/usuario.png">
-                 </span>
-             </a>
-         </li>
-         </li>
-     </ul>
- </div>
- 
- 
- <head>
- 
- 
-     <img src="assets/ompletion.jpg">
- 
- </head>
- 
- 
- 
- 
- 
- 
- 
- <!-- /container -->
- <script>
- 
-     $('.gn-icon-menu').hover(function () {
-         $('.gn-menu-wrapper').toggleClass('gn-open-part');
-     });
- 
-     $('.gn-menu-wrapper').hover(function () {
-         $(this).toggleClass('gn-open-all');
-     })
- </script>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- <div class="modal fade" id="demo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-     <div class="modal-dialog" ng-controller="loginController as vm" id="dialogContainer">
-         <div class="">
- 
- 
-             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-             <div class="container">
- 
-                 <div class="">
-                     <form action="" method="post" name="Login_Form" class="login-box">
-                         <div class="row text-center bol">
-                             <i class=""></i>
-                             <img src="assets/candado.png">
-                             </i>
-                         </div>
-                         <h3 class="form-signin-heading text-center">
-                             Inicio de sesión
-                         </h3>
- 
-                         <hr class="spartan">
- 
-                         <form action="">
-                             <table>
-                                 <tr>
-                                     <td WIDTH="500">
-                                             <div class="form-group">
-                                                     <div class="col-lg-1">
-                                                         <i class="fa fa-user" aria-hidden="true"></i>
-                                                     </div>
-                                                     <div class="col-lg-11">
-                                                         <input id="username" placeholder="Username" type="text" class="form-control" ng-model="vm.usuario"  ng-keyup="vm.functionUsuario()" />
-                                                         <p class="mensajeError"  ng-bind="vm.mensajeUsuario" ></p>
-                                                     </div>
-                                                 </div>
-                                                 <div class="form-group">
-                                                     <div class="col-lg-1">
-                                                         <i class="fa fa-key" aria-hidden="true"></i>
-                                                     </div>
-                                                     <div class="col-lg-11">
-                                                         <input id="password" placeholder="Password" type="password" class="form-control" ng-model="vm.contrasena"  ng-keyup="vm.functionContrasena()"/>
-                                                         <p class="mensajeError"  ng-bind="vm.mensajeContrasena" ></p>
-                                                     </div>
-                                                 </div>
-                                                        
-                     
-                                                 <div class="form-group">
-                                                     <div class="buttons">
-                                                         <div class="col-sm-5 controls"></div>
-                                                         <button type="button" href="#" id="button1" class="btn btn-primary pull-right" ng-click="vm.login()">
-                                                             <i class="glyphicon glyphicon-log-in"></i> Ingresar</button>
-                     
-                                                     </div>
-                                                       
-                                                     <hr class="spartan">
-                     
-                     
-                                                 </div>
-                                     </td>
-                                     <td>
-                                             <img src="assets/redes.png">
-                                     </td>
-                                     </tr>
- <tr>
-     <td>
-             <div class="row">
-                     <div class="form-group col-xs-12 col-sm-12">
-                      <a href="#">¿Olvidaste tu cuenta?</a>	           
-                    </div>
-                  </div>
-                  <div class="row">
-                     <div class="form-group col-xs-12 col-sm-12">
-                      <a href="#/registra-suario">Registrate</a>	           
-                    </div>
-                  </div>     	 
-                 <md-content>          
-                     <div ng-if="status">
-                        <br/>
-                     </div>
-                  </md-content> 
-     </td>
- </tr>
-                             
- 
- 
- 
- 
- 
- 
- 
-                             </table>
- 
- 
- 
-                         </form>
- 
-                         <div id='recaptcha' class="g-recaptcha"
-                                                 data-sitekey="6LeDsDIUAAAAAOTgmn8pB__pcQClFbSno2zA7nvX"
-                                                 data-callback="login"
-                                                 data-size="invisible"></div>  
- 
- 
- 
- 
-                         <hr class="">
- 
- 
- 
-                         <div class="form-group">
- 
- 
- 
- 
-                         </div>
- 
- 
- 
-                     </form>
-                 </div>
- 
- 
- 
-             </div>
- 
-         </div>
-     </div>
- </div>
- 
-
-
- <iframe src="https://docs.google.com/document/d/e/2PACX-1vTgwQssNAfpsapgMODjUGzAcNr8vNTjE-ZLKXW6Q_OElJ_Yu79T5yobdJmEVT-9cMZKukH91IQvOWZv/pub?embedded=true"></iframe>
+</nav>
+        <div class="body-login"  ng-controller="loginController as vm" id="dialogContainer" >
+        <h1 class="titulo-login">Iniciar sesión</h1>
+        <div class="row">   	    	
+           <div class="form-group col-xs-12 col-sm-12">
+            <label for="usr">Usuario* (Correo registrado)</label>
+            <input type="text" class="form-control" ng-model="vm.usuario"  ng-keyup="vm.functionUsuario()">
+              <p class="mensajeError"  ng-bind="vm.mensajeUsuario" ></p>
+          </div>
+        </div>
+        <div class="row">
+           <div class="form-group col-xs-12 col-sm-12">
+            <label for="usr">Contraseña*</label>
+            <input type="password" class="form-control" ng-model="vm.contrasena"  ng-keyup="vm.functionContrasena()">
+             <p class="mensajeError"  ng-bind="vm.mensajeContrasena" ></p>
+          </div>
+        </div>
+        <div id='recaptcha' class="g-recaptcha"
+         data-sitekey="6LeDsDIUAAAAAOTgmn8pB__pcQClFbSno2zA7nvX"
+         data-callback="login"
+         data-size="invisible"></div>   	  
+        <div class="row botones">
+           <div class="form-group col-xs-6 col-sm-6">
+            <button type="button" class="btn btn-success" ng-click="vm.cancelar()">Cancelar</button>
+          </div>
+          <div class="form-group col-xs-6 col-sm-6">
+             <button type="button" id="button1" class="btn btn-success" ng-click="vm.login()">Aceptar</button>
+          </div>
+        </div>
+        <!-- <div class="row">
+           <div class="form-group col-xs-12 col-sm-12">
+            <a href="#">¿Olvidaste tu cuenta?</a>	           
+          </div>
+        </div> -->
+        <div class="row">
+           <div class="form-group col-xs-12 col-sm-12">
+            <a href="#/registra-suario">Regístrate</a>	           
+          </div>
+        </div>     	 
+       <md-content>          
+           <div ng-if="status">
+              <br/>
+           </div>
+        </md-content>   
+  </div> 
+  <section class="successs footer-zone-transactional" id="redsocial">
+        <img src="assets/piedepagina.png" style="padding-left: 200px">
+   </section> 

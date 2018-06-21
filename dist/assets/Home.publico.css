@@ -58,7 +58,7 @@ div.logo{
 
 	height: 600px;
 	margin: auto;
-	background: url(images.png) no-repeat center; 
+	/* background: url(images.png) no-repeat center;  */
 }
 
 div.row h1 {
@@ -206,7 +206,7 @@ section.success{
 
     
     .navbar-default {
-        background-color: #ffffff8a;
+        background-color: #ffffff;
         border-color: #e7e7e7;
         border-color: #e7e7e700;
     } 
@@ -416,4 +416,51 @@ body {padding-top:0px;}
 	width: 45% !important;
 }
 
-/* PIE DE PAGINA */
+.pagination ul li{
+    list-style-type: none;
+    display: inline;
+    padding-right: 5px;
+}
+
+.pagination ul>.disabled>span, .pagination ul>.disabled>a, .pagination ul>.disabled>a:hover, .pagination ul>.disabled>a:focus {
+    color: #999999;
+    background-color: transparent;
+    cursor: default;
+}
+
+.pagination ul>li>a, .pagination ul>li>span {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-left-width: 0;
+}
+
+.pagination ul>li>a {
+    color: #428bca;
+}
+
+.adoptame-apadriname{
+    width: 100%;
+    /* padding: 50%; */
+    padding-right: 34%;
+    padding-left: 34%;
+    padding-left: 34%;
+    padding-right: 34%;
+    color: #30a6c0;
+}
+
+.body-login{
+    width: 30%;
+    margin-left: 33%;
+    padding-top: 5%;
+}
+
+
+.titulo-login {
+    margin-bottom: 70px;
+    color: rgb(29, 51, 102);
+    padding-left: 26%;
+}

@@ -17,7 +17,7 @@
                     <th scope="row">{{solicitud.idAdopcion}}</th>
                     <td>{{solicitud.usuario}}</td>
                     <td>{{solicitud.idMascota}}</td>
-                    <td>{{solicitud.fecha}}</td>
+                    <td>{{solicitud.fecha | date }}</td>
                     <td>
                         <div class="animate-switch-container"  ng-switch="{{solicitud.estadoSolicitud}}">
                         <div class="animate-switch" ng-switch-when="1">En proceso</div>
@@ -36,3 +36,6 @@
         </div>
     </div>
 </div>
+<section class="successs footer-zone-transactional" id="redsocial">
+        <img src="assets/piedepagina.png" style="padding-left: 200px">
+   </section> 
